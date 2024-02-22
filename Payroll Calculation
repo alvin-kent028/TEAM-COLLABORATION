@@ -1,0 +1,50 @@
+
+package motorph;
+
+import java.util.Scanner;
+
+public class Payroll {
+    
+    public static void main(String[] args){
+        
+        int days ;
+        double rate ;
+        double salary;
+        double tax;
+        double sss ;
+        double philhealth ;
+        double pagibig ;
+        double grosssalary;
+        
+        Scanner read = new Scanner(System.in);
+        
+        System.out.print("Days worked : ");
+        days = read.nextInt();
+        System.out.print("Rate : " );
+        rate = read.nextDouble();
+        System.out.print("Input SSS : ");
+        sss = read.nextDouble();
+        System.out.print("PhilHealth : ");
+        philhealth = read.nextDouble();
+        System.out.print("Pagibig : ");
+        pagibig = read.nextDouble();
+        
+        
+        grosssalary = rate * days;
+        tax = (rate * days) * 0.1;
+        salary = grosssalary - tax - sss - philhealth - pagibig;
+        
+        System.out.println("Days : "  + days);
+        System.out.println("Rate : "  + rate);
+        System.out.println("Salary : "  + salary);
+        System.out.println("Tax : "  + tax);
+        System.out.println("SSS : "  + sss);
+        System.out.println("Philhealth : "  + philhealth);
+        System.out.println("Salary : "  + salary);
+        System.out.println("Pagibig : "  + pagibig);
+        
+        
+        
+    }
+    
+}
